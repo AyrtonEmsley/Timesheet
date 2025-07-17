@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Earnings Calculator</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1>Weekly Earnings Calculator</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Start Time</th>
+        <th>Finish Time</th>
+        <th>Hours Worked</th>
+      </tr>
+    </thead>
+    <tbody id="workTable">
+      <!-- JS will populate rows -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"><strong>Total Hours:</strong></td>
+        <td id="totalHours">0</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="inputs">
+    <label>Hourly Wage: £<input type="number" id="hourlyWage" /></label>
+    <label>Daily Bank Balance: £<input type="number" id="bankBalance" /></label>
+    <label>Do you have a standard pension? 
+      <select id="pension">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </label>
+    <label>LISA Contribution (£): <input type="number" id="lisa" /></label>
+    <label>Required Daily Balance: £<input type="number" id="targetBalance" /></label>
+    <button onclick="calculate()">Calculate</button>
+  </div>
+
+  <div class="results">
+    <h2>Results</h2>
+    <p>Gross Pay: £<span id="grossPay">0</span></p>
+    <p>Tax Deducted: £<span id="tax">0</span></p>
+    <p>Pension Contribution: £<span id="pensionAmount">0</span></p>
+    <p>LISA Payment: £<span id="lisaAmount">0</span></p>
+    <p>Net Pay: £<span id="netPay">0</span></p>
+    <p>Leftover After Target: £<span id="leftover">0</span></p>
+    <p>Motive Money: £<span id="motiveMoney">0</span></p>
+    <p>Investments: £<span id="investments">0</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
